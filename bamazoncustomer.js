@@ -32,12 +32,10 @@ function start() {
                     }])
                 .then(function(answer){
                     var chosenItem;
-                    console.log(answer.item);
                     for (var i = 0; i < results.length; i++) {
                         console.log(results[i].Id);
                         if (results[i].Id === parseInt(answer.item)) {
                             chosenItem = results[i];
-                            console.log(chosenItem);
                         }
 
                     };
