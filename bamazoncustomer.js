@@ -33,7 +33,6 @@ function start() {
                 .then(function(answer){
                     var chosenItem;
                     for (var i = 0; i < results.length; i++) {
-                        console.log(results[i].Id);
                         if (results[i].Id === parseInt(answer.item)) {
                             chosenItem = results[i];
                         }
