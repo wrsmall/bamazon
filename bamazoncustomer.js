@@ -1,12 +1,7 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
-var con = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "Imthebest@30",
-    database: "bamazon"
-});
+var keys=require("./keys.js");
+var con = mysql.createConnection(keys.password);
 
 function start() {
    
