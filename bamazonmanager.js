@@ -50,6 +50,7 @@ function Inventory() {
 
         };
     });
+    routes();
 }
 
 function lowInventory() {
