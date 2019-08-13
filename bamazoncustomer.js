@@ -1,3 +1,4 @@
+require("dotenv").config();
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 var keys=require("./keys.js");
