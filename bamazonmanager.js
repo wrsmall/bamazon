@@ -124,34 +124,34 @@ function addInventory() {
                 message: "To which item would you like to add inventory?"
             },
             {
-                name: "quanity",
+                name: "quantity",
                 type: "input",
                 message: "How much inventory would you like to add?"
             }])
         .then(function (answer) {
-            con.query("SELECT * FROM products", function (results2) {
-
+            con.query("SELECT * FROM products", function (err,results2) {
+                console.log(results2);
                 var chosenItem;
                 for (var i = 0; i < results2.length; i++) {
-                    if (results2[i].Product_Name === parseInt(answer.item)) {
-                        chosenItem = results[i];
+                    if (results2[i].Product_Name === answer.item) {
+                        chosenItem = results2[i];
                     }
                 }
 
                 // Adds new stock  to existing stock.
-                var updatedStock = parseInt(chosenItem.stock_quantity) + parseInt(answer.quanity);
+                var updatedStock = parseInt(chosenItem.Stock_Quantity) + parseInt(answer.quantity);
 
                 console.log(`${updatedStock} UNITS ADDED!!`)
 
                 con.query("UPDATE products SET ? WHERE ?", [{
-                    stock_quantity: updatedStock
+                    Stock_Quantity: updatedStock
                 }, {
-                    item_id: answer.item
+                    Product_Name: answer.item
                 }],
 
                 );
                 Inventory();
-                routes();
+        
             });
 
 
