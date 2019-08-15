@@ -110,7 +110,7 @@ function newItem() {
                 },
             )
             Inventory();
-            routes();
+            
         })
 
 
