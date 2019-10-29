@@ -1,5 +1,5 @@
 # bamazon
-In this project, I created an Amazon-like storefront with the MySQL skills you learned this unit. The app will take in orders from customers and deplete stock from the store's inventory. 
+In this project, I created an Amazon-like storefront with MySQL . On the customer page, Bamazon allows a customer to make an order, while simultaneously depleteing the stock as the user shops.  
 <h3>BAMAZONCUSTOMER</H3>
 
 ![ ](bamazoncustomer.gif)
